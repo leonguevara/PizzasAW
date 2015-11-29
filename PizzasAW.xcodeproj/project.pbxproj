@@ -20,6 +20,12 @@
 		F6CEF1D31C06152800D81682 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1D21C06152800D81682 /* ExtensionDelegate.swift */; };
 		F6CEF1D51C06152800D81682 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1D41C06152800D81682 /* NotificationController.swift */; };
 		F6CEF1D71C06152800D81682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CEF1D61C06152800D81682 /* Assets.xcassets */; };
+		F6CEF1E71C0B38F200D81682 /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1E61C0B38F200D81682 /* Datos.swift */; };
+		F6CEF1E91C0B3DD900D81682 /* SizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1E81C0B3DD900D81682 /* SizeController.swift */; };
+		F6CEF1EB1C0B3E1300D81682 /* MasasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1EA1C0B3E1300D81682 /* MasasController.swift */; };
+		F6CEF1ED1C0B3E3C00D81682 /* QuesosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1EC1C0B3E3C00D81682 /* QuesosController.swift */; };
+		F6CEF1EF1C0B3E6900D81682 /* IngredientesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1EE1C0B3E6900D81682 /* IngredientesController.swift */; };
+		F6CEF1F11C0B3EA100D81682 /* ConfirmacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEF1F01C0B3EA100D81682 /* ConfirmacionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,12 @@
 		F6CEF1D41C06152800D81682 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F6CEF1D61C06152800D81682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6CEF1D81C06152800D81682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CEF1E61C0B38F200D81682 /* Datos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
+		F6CEF1E81C0B3DD900D81682 /* SizeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeController.swift; sourceTree = "<group>"; };
+		F6CEF1EA1C0B3E1300D81682 /* MasasController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasasController.swift; sourceTree = "<group>"; };
+		F6CEF1EC1C0B3E3C00D81682 /* QuesosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesosController.swift; sourceTree = "<group>"; };
+		F6CEF1EE1C0B3E6900D81682 /* IngredientesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesController.swift; sourceTree = "<group>"; };
+		F6CEF1F01C0B3EA100D81682 /* ConfirmacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmacionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,12 @@
 				F6CEF1D61C06152800D81682 /* Assets.xcassets */,
 				F6CEF1D81C06152800D81682 /* Info.plist */,
 				F6CEF1CE1C06152800D81682 /* Supporting Files */,
+				F6CEF1E61C0B38F200D81682 /* Datos.swift */,
+				F6CEF1E81C0B3DD900D81682 /* SizeController.swift */,
+				F6CEF1EA1C0B3E1300D81682 /* MasasController.swift */,
+				F6CEF1EC1C0B3E3C00D81682 /* QuesosController.swift */,
+				F6CEF1EE1C0B3E6900D81682 /* IngredientesController.swift */,
+				F6CEF1F01C0B3EA100D81682 /* ConfirmacionController.swift */,
 			);
 			path = "PizzasAW WatchKit Extension";
 			sourceTree = "<group>";
@@ -309,8 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CEF1D51C06152800D81682 /* NotificationController.swift in Sources */,
+				F6CEF1EB1C0B3E1300D81682 /* MasasController.swift in Sources */,
+				F6CEF1F11C0B3EA100D81682 /* ConfirmacionController.swift in Sources */,
+				F6CEF1E71C0B38F200D81682 /* Datos.swift in Sources */,
 				F6CEF1D31C06152800D81682 /* ExtensionDelegate.swift in Sources */,
+				F6CEF1EF1C0B3E6900D81682 /* IngredientesController.swift in Sources */,
+				F6CEF1ED1C0B3E3C00D81682 /* QuesosController.swift in Sources */,
 				F6CEF1D11C06152800D81682 /* InterfaceController.swift in Sources */,
+				F6CEF1E91C0B3DD900D81682 /* SizeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
