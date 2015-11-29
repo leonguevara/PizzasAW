@@ -107,19 +107,59 @@
                     <items>
                         <label width="1" alignment="left" text="Paso 4:" textAlignment="center" id="Znf-WU-cxo"/>
                         <label width="1" alignment="left" text="Ingredientes" textAlignment="center" id="JNa-VX-7a6"/>
-                        <switch width="1" alignment="left" title="Pepperoni" id="fUo-g2-noe"/>
-                        <switch width="1" alignment="left" title="Jamón" id="2Y2-GD-Yd4"/>
-                        <switch width="1" alignment="left" title="Pavo" id="z4D-Vn-nAs"/>
-                        <switch width="1" alignment="left" title="Salchicha" id="2kZ-M3-2U5"/>
-                        <switch width="1" alignment="left" title="Anchoas" id="mQD-tt-V8a"/>
-                        <switch width="1" alignment="left" title="Aceitunas" id="knp-a5-3XJ"/>
-                        <switch width="1" alignment="left" title="Cebolla" id="t4H-A8-ZsZ"/>
-                        <switch width="1" alignment="left" title="Pimiento" id="bxQ-Cp-KxN"/>
-                        <switch width="1" alignment="left" title="Piña" id="KZa-oG-L8s"/>
-                        <switch width="1" alignment="left" title="Champiñones" id="Kd0-Oo-rI2"/>
+                        <switch width="1" alignment="left" title="Pepperoni" id="fUo-g2-noe">
+                            <connections>
+                                <action selector="elegirPepperoni:" destination="nwi-Ic-1K9" id="w9W-Lf-6Ml"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Jamón" id="2Y2-GD-Yd4">
+                            <connections>
+                                <action selector="elegirJamon:" destination="nwi-Ic-1K9" id="lVP-1e-HxO"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pavo" id="z4D-Vn-nAs">
+                            <connections>
+                                <action selector="elegirPavo:" destination="nwi-Ic-1K9" id="L1s-J6-ixj"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Salchicha" id="2kZ-M3-2U5">
+                            <connections>
+                                <action selector="elegirSalchicha:" destination="nwi-Ic-1K9" id="iql-5c-am7"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Anchoas" id="mQD-tt-V8a">
+                            <connections>
+                                <action selector="elegirAnchoas:" destination="nwi-Ic-1K9" id="kzi-Xn-KgA"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Aceitunas" id="knp-a5-3XJ">
+                            <connections>
+                                <action selector="elegirAceitunas:" destination="nwi-Ic-1K9" id="rMG-CE-CHT"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Cebolla" id="t4H-A8-ZsZ">
+                            <connections>
+                                <action selector="elegirCebolla:" destination="nwi-Ic-1K9" id="odH-tp-Aar"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pimiento" id="bxQ-Cp-KxN">
+                            <connections>
+                                <action selector="elegirPimiento:" destination="nwi-Ic-1K9" id="o54-Hc-kFG"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Piña" id="KZa-oG-L8s">
+                            <connections>
+                                <action selector="elegirPina:" destination="nwi-Ic-1K9" id="wQF-65-OT1"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Champiñones" id="Kd0-Oo-rI2">
+                            <connections>
+                                <action selector="elegirChampinones:" destination="nwi-Ic-1K9" id="kMK-vi-cVz"/>
+                            </connections>
+                        </switch>
                         <button width="1" alignment="left" title="Revisa tu orden" id="obg-cV-rM0">
                             <connections>
-                                <segue destination="GOp-eQ-H7u" kind="push" id="6oa-PA-goe"/>
+                                <action selector="revisarOrden" destination="nwi-Ic-1K9" id="RaU-zZ-rGe"/>
                             </connections>
                         </button>
                     </items>
@@ -139,21 +179,44 @@
             </objects>
             <point key="canvasLocation" x="1221" y="345"/>
         </scene>
-        <!--Confirmacion Controller-->
+        <!--IdentificadorValor4-->
         <scene sceneID="FzV-Uz-KG2">
             <objects>
-                <controller id="GOp-eQ-H7u" customClass="ConfirmacionController" customModule="PizzasAW_WatchKit_Extension">
+                <controller identifier="IdentificadorValor4" id="GOp-eQ-H7u" customClass="ConfirmacionController" customModule="PizzasAW_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Tu orden:" textAlignment="center" id="WF7-uJ-Kdy"/>
                         <label width="1" alignment="left" text="Tamaño:" textAlignment="center" numberOfLines="2" id="UeF-yS-tNv"/>
                         <label width="1" alignment="left" text="Masa:" textAlignment="center" numberOfLines="2" id="tkg-xq-d9J"/>
                         <label width="1" alignment="left" text="Queso:" textAlignment="center" numberOfLines="2" id="hPD-vg-cc3"/>
                         <label width="1" alignment="left" text="Ingredientes:" textAlignment="center" numberOfLines="7" id="Aa9-zw-ogq"/>
-                        <button width="1" alignment="left" title="Confirmar" id="Bec-Dp-SfN"/>
+                        <button width="1" alignment="left" title="Confirmar" id="Bec-Dp-SfN">
+                            <connections>
+                                <segue destination="xRc-GP-kQn" kind="push" id="rYh-GB-qWL"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="botonConfirmar" destination="Bec-Dp-SfN" id="o8Q-AH-yau"/>
+                        <outlet property="ingredientes" destination="Aa9-zw-ogq" id="0yJ-mb-20K"/>
+                        <outlet property="masa" destination="tkg-xq-d9J" id="k4W-6C-zUS"/>
+                        <outlet property="queso" destination="hPD-vg-cc3" id="hUl-KW-Pzh"/>
+                        <outlet property="tamano" destination="UeF-yS-tNv" id="RE6-rv-lRB"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="1449" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Rg6-XI-cLv">
+            <objects>
+                <controller id="xRc-GP-kQn">
+                    <items>
+                        <label width="1" alignment="left" text="¡Gracias por tu preferencia!" textAlignment="center" numberOfLines="2" id="sP6-RN-8jl"/>
+                        <label width="1" alignment="left" text="Tu orden ha sido enviada a cocina" textAlignment="center" numberOfLines="2" id="hG9-Sf-Lsy"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1687" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

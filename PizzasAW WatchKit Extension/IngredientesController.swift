@@ -16,7 +16,6 @@ class IngredientesController: WKInterfaceController {
     var masa : String = ""
     var queso : String = ""
     var numIng : Int = 0
-    var ingredientes : String = ""
     
     var conPepperoni : Bool = false
     var conJamon : Bool = false
@@ -181,4 +180,212 @@ class IngredientesController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func elegirPepperoni(value: Bool) {
+        conPepperoni = value
+        if (conPepperoni) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirJamon(value: Bool) {
+        conJamon = value
+        if (conJamon) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirPavo(value: Bool) {
+        conPavo = value
+        if (conPavo) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirSalchicha(value: Bool) {
+        conSalchicha = value
+        if (conSalchicha) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirAnchoas(value: Bool) {
+        conAnchoas = value
+        if (conAnchoas) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirAceitunas(value: Bool) {
+        conAceitunas = value
+        if (conAceitunas) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirCebolla(value: Bool) {
+        conCebolla = value
+        if (conCebolla) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirPimiento(value: Bool) {
+        conPimiento = value
+        if (conPimiento) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirPina(value: Bool) {
+        conPina = value
+        if (conPina) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    
+    @IBAction func elegirChampinones(value: Bool) {
+        conChampinones = value
+        if (conChampinones) {
+            numIng++
+            if (numIng == 5) {
+                inhabilitaSwitches()
+            }
+        }
+        else {
+            numIng--
+            if (numIng == 4) {
+                habilitaSwitches()
+            }
+        }
+    }
+    
+    func ingredientesElegidos() -> String {
+        var misIngredientes : String = ""
+        if conPepperoni {
+            misIngredientes += "Pepperoni\n"
+        }
+        if conJamon {
+            misIngredientes += "Jamón\n"
+        }
+        if conPavo {
+            misIngredientes += "Pavo\n"
+        }
+        if conSalchicha {
+            misIngredientes += "Salchicha\n"
+        }
+        if conAnchoas {
+            misIngredientes += "Anchoas\n"
+        }
+        if conAceitunas {
+            misIngredientes += "Aceitunas\n"
+        }
+        if conCebolla {
+            misIngredientes += "Cebolla\n"
+        }
+        if conPimiento {
+            misIngredientes += "Pimiento;\n"
+        }
+        if conPina{
+            misIngredientes += "Piña\n"
+        }
+        if conChampinones {
+            misIngredientes += "Champiñones\n"
+        }
+        return misIngredientes
+    }
+    
+    @IBAction func revisarOrden() {
+        let valorContexto=Datos(tp : tamano, mp:masa, qp:queso, num:numIng, ing:ingredientesElegidos())
+        pushControllerWithName("IdentificadorValor4", context: valorContexto)
+    }
 }
