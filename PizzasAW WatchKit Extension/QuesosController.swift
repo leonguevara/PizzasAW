@@ -17,6 +17,7 @@ class QuesosController: WKInterfaceController {
     var quesoPizza: String = "Sin queso"
     
     @IBOutlet var queso: WKInterfaceLabel!
+    @IBOutlet var etiquetaQueso: WKInterfaceLabel!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -32,6 +33,7 @@ class QuesosController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        etiquetaQueso.setText("Tipo de queso🧀")
     }
 
     override func didDeactivate() {
@@ -41,11 +43,11 @@ class QuesosController: WKInterfaceController {
 
     @IBAction func nuevoQueso(value: Float) {
         if (value == 1) {
-            quesoPizza = "Mozzarela"
+            quesoPizza = "🧀Mozzarela"
         } else if (value == 2) {
-            quesoPizza = "Cheddar"
+            quesoPizza = "🧀Cheddar"
         } else if (value == 3) {
-            quesoPizza = "Parmesano"
+            quesoPizza = "🧀Parmesano"
         } else {
             quesoPizza = "Sin queso"
         }

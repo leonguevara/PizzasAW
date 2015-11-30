@@ -12,7 +12,7 @@
                     <items>
                         <label width="1" alignment="left" text="¡Bienvenido!" textAlignment="center" id="5Ts-zt-us4"/>
                         <label width="1" alignment="left" text="Arma tu pizza a tu gusto" textAlignment="center" numberOfLines="2" id="7nC-sf-xId"/>
-                        <button width="1" alignment="left" title="Comenzar" id="1gP-XI-S3o">
+                        <button width="1" alignment="left" title="🍕Comenzar🍕" id="1gP-XI-S3o">
                             <connections>
                                 <segue destination="6zX-SD-VUV" kind="push" id="c6J-76-35j"/>
                             </connections>
@@ -42,6 +42,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="etiquetaTamano" destination="YN5-RT-Vkc" id="Ywi-Fp-juQ"/>
                         <outlet property="tamano" destination="Udf-Ip-Szn" id="Wg0-Wl-F4l"/>
                     </connections>
                 </controller>
@@ -94,6 +95,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="etiquetaQueso" destination="Ek2-cA-rqb" id="BvS-CZ-9wk"/>
                         <outlet property="queso" destination="DVc-3d-G3I" id="brX-wp-YG6"/>
                     </connections>
                 </controller>
@@ -188,10 +190,15 @@
                         <label width="1" alignment="left" text="Tamaño:" textAlignment="center" numberOfLines="2" id="UeF-yS-tNv"/>
                         <label width="1" alignment="left" text="Masa:" textAlignment="center" numberOfLines="2" id="tkg-xq-d9J"/>
                         <label width="1" alignment="left" text="Queso:" textAlignment="center" numberOfLines="2" id="hPD-vg-cc3"/>
-                        <label width="1" alignment="left" text="Ingredientes:" textAlignment="center" numberOfLines="7" id="Aa9-zw-ogq"/>
+                        <label width="1" alignment="left" text="Ingredientes:" textAlignment="center" numberOfLines="10" id="Aa9-zw-ogq"/>
                         <button width="1" alignment="left" title="Confirmar" id="Bec-Dp-SfN">
                             <connections>
                                 <segue destination="xRc-GP-kQn" kind="push" id="rYh-GB-qWL"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Cancelar" id="tJw-pD-Xy9">
+                            <connections>
+                                <segue destination="CuV-jN-k6r" kind="push" id="bjw-2b-27r"/>
                             </connections>
                         </button>
                     </items>
@@ -213,10 +220,31 @@
                     <items>
                         <label width="1" alignment="left" text="¡Gracias por tu preferencia!" textAlignment="center" numberOfLines="2" id="sP6-RN-8jl"/>
                         <label width="1" alignment="left" text="Tu orden ha sido enviada a cocina" textAlignment="center" numberOfLines="2" id="hG9-Sf-Lsy"/>
+                        <button width="1" alignment="left" title="Reiniciar" id="Vsc-CF-6dc">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="yM6-nd-7xU"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1687" y="345"/>
+            <point key="canvasLocation" x="1709" y="696"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="xzb-Qt-Ex5">
+            <objects>
+                <controller id="CuV-jN-k6r">
+                    <items>
+                        <label width="1" alignment="left" text="Has cancelado tu orden" textAlignment="center" numberOfLines="2" id="gaJ-uK-z0d"/>
+                        <button width="1" alignment="left" title="Reiniciar" id="cx5-lt-uOp">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="5FE-C4-ZZl"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1407" y="856"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -242,4 +270,7 @@
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yM6-nd-7xU"/>
+    </inferredMetricsTieBreakers>
 </document>

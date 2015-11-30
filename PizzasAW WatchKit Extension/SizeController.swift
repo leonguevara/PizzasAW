@@ -12,8 +12,9 @@ import Foundation
 
 class SizeController: WKInterfaceController {
 
-    var tamanoPizza: String = "Chica"
+    var tamanoPizza: String = "Chica 🍕"
     
+    @IBOutlet var etiquetaTamano: WKInterfaceLabel!
     @IBOutlet var tamano: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -24,6 +25,8 @@ class SizeController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        etiquetaTamano.setText("Tamaño 🍕:")
+        tamano.setText("Chica 🍕");
     }
 
     override func didDeactivate() {
@@ -33,12 +36,12 @@ class SizeController: WKInterfaceController {
 
     @IBAction func nuevoTamano(value: Float) {
         if (value == 1) {
-            tamanoPizza = "Chica"
+            tamanoPizza = "Chica 🍕"
         } else if (value == 2) {
-            tamanoPizza = "Mediana"
+            tamanoPizza = "Mediana 🍕🍕"
         }
         else {
-            tamanoPizza = "Grande"
+            tamanoPizza = "Grande 🍕🍕🍕"
         }
         tamano.setText(tamanoPizza)
     }

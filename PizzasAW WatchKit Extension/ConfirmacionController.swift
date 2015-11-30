@@ -28,7 +28,7 @@ class ConfirmacionController: WKInterfaceController {
             tamano.setHidden(true)
             masa.setHidden(true)
             queso.setHidden(true)
-            ingredientes.setText("Debes elegir por lo menos un ingrediente")
+            ingredientes.setText("Debes elegir por lo menos un ingrediente. Regresa a elegirlo por favor")
             botonConfirmar.setHidden(true)
         } else {
             tamano.setText(c.tamanoMiPizza)
